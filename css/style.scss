@@ -1,0 +1,211 @@
+:root{
+    --main-color :#2196f3;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    
+}
+.game{
+    min-height: 100vh;
+    background-color: #f9f8f8;
+    .name{
+        background-color: #2196f3;
+        color: white;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .container{
+        margin: auto;
+        max-width: 900px;
+        .message{
+            background-color: #fff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            text-align: center;
+            span{
+                font-weight: bold;
+                color: #009688;
+            }
+            span::after{
+                content: ' ]';
+            }
+            span::before{
+                content: '[ ';
+            }    
+        }
+        .start{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #009688;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .the-word{
+            user-select: none;
+            text-align: center;
+            font-size: 60px;
+            font-weight: bold;
+            color: #2196f3;
+
+        }
+        input{
+            text-align: center;
+            margin: 15px 0px;
+            width: 100%;
+            display: block;
+            padding: 15px;
+            border: 3px solid #2196f3;
+            font-size: 20px;
+            text-transform: capitalize;
+            border-radius: 6px;
+            caret-color: #2196f3;
+        }
+        input:focus{
+            outline: none;
+        }
+        .upcoming-words{
+            background-color: #fff;
+            margin: 15px 0 ;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            div{
+                background-color: #2196f3;
+                color: #fff;
+                font-weight: bold;
+                margin: 4px;
+                padding: 10px;
+                border-radius: 6px;
+                user-select: none;
+            }
+        }
+        .control{
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px;
+            span{
+                font-weight: bold;
+                color: #009688;
+            }
+        }
+        .finish{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 15px;
+            .good{
+                color: #009688;
+            }
+            .bad{
+                color: red;
+            }
+        }
+    }
+}
+.levels{
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    padding: 20px;
+    div{
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    }
+    .easy{
+        background-color: #090;
+    }
+    .normal{
+        background-color: #0062b1;
+    }
+    .hard{
+        background-color: red;
+        
+    }
+}
+.allert{
+    padding: 10px 20px;
+    background-color: #a55454;
+    color: #fff;
+    user-select: none;
+    text-align: center;
+    transition: 2s;
+}
+.tips{
+    display: flex;
+    justify-content: center;
+    gap: 31px;
+    font-size: 17px;
+    padding:20px 15px ;
+    background-color: #dee7f1;
+    border-radius: 10px;
+    .tip{
+        font-weight: 800;
+    font-size: 20px;
+    flex: auto;
+    }
+    ul{
+        display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 20px;
+    font-weight: 600;
+    li::marker{
+        color: rgb(63 0 249);
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .first{
+        color:#251615 ; 
+        font-weight: 900;
+        font-style: italic;
+        
+      }
+      .eas{
+        color: #090;
+      }
+      .norm{
+        color: #0027ff;
+      }
+      .har{
+        color: red;
+      }
+      .sec{
+        color: #251615;
+    font-weight: 900;
+    font-style: italic;
+      }
+      .second{
+        color: #251615;
+    font-weight: 900;
+    font-style: italic;
+      }
+      .warning{
+        color: #251615;
+    font-weight: 900;
+    font-style: italic;
+      }
+    }
+}
+@media(max-width :400px){
+    .container{
+        padding: 0 10px;
+    }
+    .game .levels{
+        gap: 20px;
+    }
+}
